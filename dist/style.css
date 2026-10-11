@@ -30,3 +30,9 @@
 .ico{width:1em;height:1em;display:inline-block;vertical-align:-.125em;flex:none}
 
 .document-actions{display:inline-flex;align-items:center;gap:8px}.document-actions .resume-link{gap:7px}.document-download{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:6px;color:var(--muted);transition:background .2s,color .2s}.document-download:hover{background:var(--soft);color:var(--text)}
+
+/* Case study on narrow screens: a bare 1fr track has min-width:auto, so a wide
+   table stretched the grid column and pushed the whole page sideways, which made
+   every section render shrunken. minmax(0,1fr) lets .table-wrap scroll instead. */
+@media(max-width:900px){.full-case .section__grid{grid-template-columns:minmax(0,1fr)}.full-case .section__grid>*{min-width:0}}
+@media(max-width:700px){.full-case .section__grid{grid-template-columns:minmax(0,1fr)}.full-case .section__grid>*{min-width:0}.full-case .prose{max-width:100%}.full-case table{min-width:420px;font-size:14px}.full-case th,.full-case td{padding:11px 12px}.full-case .section__rail .mono{font-size:13px;letter-spacing:.09em}.full-case .note{font-size:14px}.full-case figcaption{font-size:13px;line-height:1.65}.full-case .pipeline__step p{font-size:14px}.full-case .callout p{font-size:15px}}

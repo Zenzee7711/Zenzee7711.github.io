@@ -5,7 +5,7 @@
     "type": "Computer vision / ML",
     "year": "2026 · Ongoing",
     "title": "Road accident-risk warning",
-    "summary": "A roadside prototype that reads traffic footage and classifies accident-risk types using computer vision and machine learning.",
+    "summary": "A roadside camera that works out which kind of accident a stretch of road is most exposed to right now, and says so in plain words.",
     "role": "Project manager & primary developer · Team of three",
     "tags": [
       "Python",
@@ -13,8 +13,8 @@
       "LightGBM",
       "OpenCV"
     ],
-    "image": "assets/road-thumbnail.png",
-    "imageAlt": "Senior-project traffic detection output with vehicle boxes and a blue road-region boundary",
+    "image": "assets/road-scene.webp",
+    "imageAlt": "Prototype output: a risk panel reading MEDIUM rear-end, a live scene panel listing vehicle counts and active tracks, vehicles boxed inside a cyan road outline, and a pedestrian boxed separately on the footpath",
     "imageCaption": "Actual prototype output",
     "href": "work/road-risk.html"
   },

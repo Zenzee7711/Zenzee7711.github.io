@@ -1,5 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"><title>Road accident-risk warning — Phone Thant Kyaw</title><meta name="description" content="A computer-vision and machine-learning research prototype. Project overview, contribution, system design, and current limitations."><meta property="og:type" content="article"><meta property="og:site_name" content="Phone Thant Kyaw"><meta property="og:title" content="Road accident-risk warning — Phone Thant Kyaw"><meta property="og:description" content="A roadside prototype that watches traffic video and estimates which kind of accident is most likely on that stretch of road. Senior project write-up."><meta property="og:url" content="https://zenzee7711.github.io/work/road-risk.html"><meta property="og:image" content="https://zenzee7711.github.io/assets/og-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Phone Thant Kyaw, Computer Engineering at Mae Fah Luang University"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://zenzee7711.github.io/work/road-risk.html"><meta name="theme-color" content="#f5f7f9"><link rel="icon" href="../assets/favicon.svg"><script src="../theme.js"></script><link rel="stylesheet" href="../style.css?v=2"><script src="../app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="header"><div class="wrap nav-inner"><a class="brand" href="../index.html" aria-label="Phone Thant Kyaw, home">ptk<span><svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' aria-hidden='true'><path d='M8 1.6v12.8M1.6 8h12.8M3.47 3.47l9.06 9.06M12.53 3.47l-9.06 9.06'/></svg></span></a><nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a><a href="../index.html#contact">Contact</a></nav><button class="theme-toggle" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button></div></header><main id="main" class="full-case">
-
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"><title>Road accident-risk warning — Phone Thant Kyaw</title><meta name="description" content="A computer-vision and machine-learning research prototype. Project overview, contribution, system design, and current limitations."><meta property="og:type" content="article"><meta property="og:site_name" content="Phone Thant Kyaw"><meta property="og:title" content="Road accident-risk warning — Phone Thant Kyaw"><meta property="og:description" content="A roadside prototype that watches traffic video and estimates which kind of accident is most likely on that stretch of road. Senior project write-up."><meta property="og:url" content="https://zenzee7711.github.io/work/road-risk.html"><meta property="og:image" content="https://zenzee7711.github.io/assets/og-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Phone Thant Kyaw, Computer Engineering at Mae Fah Luang University"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://zenzee7711.github.io/work/road-risk.html"><meta name="theme-color" content="#f5f7f9"><link rel="icon" href="../assets/favicon.svg"><script src="../theme.js"></script><link rel="stylesheet" href="../style.css?v=3"><script src="../app.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="header"><div class="wrap nav-inner"><a class="brand" href="../index.html" aria-label="Phone Thant Kyaw, home">ptk<span><svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' aria-hidden='true'><path d='M8 1.6v12.8M1.6 8h12.8M3.47 3.47l9.06 9.06M12.53 3.47l-9.06 9.06'/></svg></span></a><nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a><a href="../index.html#contact">Contact</a></nav><button class="theme-toggle" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span><span class="theme-label">Dark</span></button></div></header><main id="main" class="full-case">
 <section class="case-hero">
   <div class="wrap">
     <a class="back" href="../index.html#work">
@@ -7,24 +6,23 @@
       All work
     </a>
 
-    <p class="mono" style="margin-bottom:1rem">Senior project · ongoing · Jan 2026 – present</p>
+    <p class="mono" style="margin-bottom:1rem">Senior project · still in development · Mae Fah Luang University</p>
     <h1>Real-Time Smart Road Accident Risk Warning</h1>
-    <p class="lede">A roadside prototype that watches traffic video and estimates which <em>kind</em> of accident is most likely on that stretch of road right now.</p>
+    <p class="lede">A roadside camera watches one stretch of road and, about once a second, works out which <em>kind</em> of accident that road is most exposed to right now — then says so in plain words a driver or a traffic officer can act on.</p>
 
     <p class="project__meta" style="margin-top:2rem">
       <b>Project manager &amp; primary developer</b> · three-person team · advisor Asst. Prof. Dr. Pattaramon Vuttipittayamongkol<br>
-      Python · YOLO11 · LightGBM · OpenCV · Docker · ByteTrack · Mae Fah Luang University
+      Python · YOLO · ByteTrack · LightGBM · OpenCV · Thailand MOT accident data
     </p>
 
     <figure style="margin-top:3rem">
       <div class="frame">
-        <span class="tick" aria-hidden="true"></span>
         <picture>
-          
-          <img src="../assets/road-tracking.webp" width="1400" height="788" alt="A frame from the prototype showing five tracked vehicles inside a blue road region-of-interest polygon, each with a labelled bounding box, an identity number and a white movement trail." fetchpriority="high" decoding="async">
+          <source type="image/webp" srcset="../assets/road-scene-600.webp 600w, ../assets/road-scene.webp 975w" sizes="(max-width: 900px) 92vw, 900px">
+          <img src="../assets/road-scene.jpg" width="975" height="544" alt="A frame from the prototype. A risk panel in the top left reads MEDIUM, rear-end, confidence 0.76. A live scene panel in the top right lists vehicle counts, pedestrian status and active tracks. Vehicles inside a cyan road outline carry green boxes with tracking numbers, and a person on the footpath is boxed separately in magenta." fetchpriority="high" decoding="async">
         </picture>
       </div>
-      <figcaption>A real frame from the prototype. Blue outlines the monitored road region; the yellow line marks where detection begins; white trails are per-vehicle movement history from tracking. Licence plates pixelated for publication.</figcaption>
+      <figcaption>A real frame from the prototype. Top left is the current call: risk type, warning level and confidence. Top right is what the model was actually given — vehicle counts by class, whether anyone is on the road, and how many objects are being tracked. The cyan outline is the monitored road area. The man on the right is detected but deliberately not counted, because he is on the footpath rather than the carriageway, which is why the panel still reads <em>Road pedestrian: NO</em>. The one legible licence plate has been pixelated for publication.</figcaption>
     </figure>
   </div>
 </section>
@@ -35,14 +33,15 @@
       <span class="mono">01 / Brief</span>
     </div>
     <div class="prose">
-      <h3>The brief</h3>
-      <p>Most road-safety systems either count traffic or detect a crash after it happens. We wanted to sit in between: given what a fixed roadside camera can see at this moment, which category of accident is the most likely one here?</p>
-      <p>That framing matters because the answer is actionable in different ways. A road with heavy-vehicle queues is a rear-end problem. A road with someone walking across it is a pedestrian problem. The warning a traffic officer or a driver needs is different in each case.</p>
-      <p>We settled on five risk classes: <strong>run-off-road, rear-end, head-on, side-impact</strong> (including intersection) and <strong>pedestrian</strong>.</p>
+      <h3>What we set out to do</h3>
+      <p>Most road-safety systems either count traffic or detect a crash after it has already happened. We wanted something in between: a fixed roadside camera that looks at the scene as it is right now and says which <em>type</em> of accident this road is currently most exposed to.</p>
+      <p>That distinction is the whole point, because each type calls for a different warning. A queue of heavy vehicles is a rear-end problem. Someone stepping into the carriageway is a pedestrian problem. "Be careful" helps nobody; "keep your distance" or "pedestrian ahead" does.</p>
+      <p>So the project has three targets: train a multi-class model on Thailand's historical accident records, make a live camera produce the same kind of information that model expects, and put the answer on screen clearly enough to be useful — including a virtual LED signboard that holds a message steady instead of flickering between them.</p>
+      <p>We group accidents into five risk classes: <strong>run-off-road</strong>, <strong>rear-end</strong>, <strong>head-on</strong>, <strong>side-impact</strong> (including intersections) and <strong>pedestrian</strong>.</p>
 
       <div class="callout">
         <span class="mono">Scope</span>
-        <p>This is a fixed roadside monitoring prototype, not a vehicle-mounted driver-assistance system, and not a crash detector. It estimates risk <em>type</em>, not the probability that a crash will occur.</p>
+        <p>One fixed camera, daytime, running on a laptop. It estimates which type of accident is most likely in view. It does not predict that a crash will happen, it is not a crash detector, and it is not driver-assistance fitted to a vehicle. Weather, province and road type are set per camera rather than sensed. Nothing identifying is kept — no face or plate recognition, and the log stores only a timestamp, the predicted class, the confidence and the warning level.</p>
       </div>
     </div>
   </div>
@@ -52,49 +51,49 @@
   <div class="wrap section__grid">
     <div class="section__rail">
       <span class="mono">02 / System</span>
-      <span class="note">Each stage had to survive the one before it being wrong.</span>
+      <span class="note">Each stage has to survive the one before it being wrong.</span>
     </div>
     <div>
       <div class="prose">
         <h3>How the system fits together</h3>
-        <p>The pipeline is deliberately simple. Detection produces objects, the geometry filters decide which objects count, the counts become a feature vector, and the model turns that vector into a risk class with a confidence. Everything downstream of detection is cheap, which is what makes it run continuously.</p>
+        <p>The model never sees the video. It sees a short row of numbers — how many of each kind of vehicle are on the road, whether anyone is walking on it, the time, the weather, the road type. The camera's only job is to produce that row honestly, which turned out to be the harder half.</p>
       </div>
 
       <div class="pipeline">
         <div class="pipeline__step">
           <span class="pipeline__n">01</span>
-          <h4>Roadside video</h4>
-          <p>Fixed-camera traffic footage, processed frame by frame.</p>
+          <h4>Roadside camera</h4>
+          <p>One fixed view of the road, 1080p at 30fps in the demo setup.</p>
         </div>
         <div class="pipeline__step">
           <span class="pipeline__n">02</span>
-          <h4>YOLO11 detection</h4>
-          <p>Cars, motorcycles, buses, trucks and people. ByteTrack adds persistent IDs and movement history.</p>
+          <h4>YOLO detection</h4>
+          <p>Cars, motorcycles, buses, trucks and people. ByteTrack gives each one a lasting ID.</p>
         </div>
         <div class="pipeline__step">
           <span class="pipeline__n">03</span>
-          <h4>Region &amp; rider filters</h4>
-          <p>Drop anything outside the road polygon or above the detection line; separate riders from pedestrians.</p>
+          <h4>Road filters</h4>
+          <p>Drop anything outside the road area or above the detection line, and tell riders apart from pedestrians.</p>
         </div>
         <div class="pipeline__step">
           <span class="pipeline__n">04</span>
-          <h4>Feature vector</h4>
-          <p>Vehicle counts by class, pedestrian presence, cyclical hour, weekend flag, weather, road type, province.</p>
+          <h4>Feature row</h4>
+          <p>Counts by class, pedestrian flag, time of day, weekend flag, weather, road type, province.</p>
         </div>
         <div class="pipeline__step">
           <span class="pipeline__n">05</span>
-          <h4>LightGBM pipeline</h4>
-          <p>The exported model returns one of five risk classes with a confidence score.</p>
+          <h4>LightGBM</h4>
+          <p>Returns a probability for each of the five risk classes; the highest one wins.</p>
         </div>
         <div class="pipeline__step">
           <span class="pipeline__n">06</span>
-          <h4>Warning &amp; log</h4>
-          <p>Confidence bands drive the on-screen warning; every event is appended to a CSV log.</p>
+          <h4>Warning and log</h4>
+          <p>Confidence decides the warning level and the message on the LED signboard. Every call is logged.</p>
         </div>
       </div>
 
       <div class="prose">
-        <p style="font-size:.9rem;color:var(--ink-3)">Stages 03 to 06 are the parts I spent the most time on. Stage 02 is largely configuration.</p>
+        <p style="font-size:.9rem;color:var(--muted)">Stages 03 to 06 are where most of my time went. Stage 02 is largely configuration.</p>
       </div>
     </div>
   </div>
@@ -107,32 +106,47 @@
     </div>
     <div class="prose">
       <h3>The data</h3>
-      <p>The model is trained on historical Thai road accident records rather than on video. The cleaned set holds <strong>139,924 records covering 2019–2025</strong>, reduced from 143,124 raw rows after removing duplicates, and split 111,939 / 27,985 for training and testing.</p>
-      <p>The class balance is the defining problem. Run-off-road accidents dominate the record; pedestrian accidents are rare, and the largest class holds roughly <strong>fifty times</strong> the records of the smallest. A classifier trained naively on that will learn to say "run-off-road" and be right most of the time while being useless for the classes that matter most.</p>
-      <p>So the evaluation metric had to be one that punishes ignoring small classes — macro-averaged recall, which weights every class equally regardless of how many examples it has — and the training had to try explicit resampling.</p>
+      <p>The model is trained on historical records, not on video. We used Thailand's open road accident data from the Ministry of Transport, covering <strong>2019 to 2025</strong>: 143,124 raw rows, reduced to <strong>139,924</strong> after removing duplicates, then split 80/20 for training and testing.</p>
+      <p>The class balance is the defining problem:</p>
 
-      <h3>Features</h3>
-      <p>The feature set is constrained by what a camera can actually supply in real time, which is a tighter list than what the accident records contain:</p>
       <div class="table-wrap">
         <table>
-          <caption class="mono" style="text-align:left;padding-bottom:.75rem;color:var(--ink-3)">Model inputs, as recorded in the deployed pipeline config</caption>
+          <caption class="mono" style="text-align:left;padding-bottom:.75rem;color:var(--muted)">Records per risk class after cleaning</caption>
           <thead>
-            <tr><th scope="col">Feature</th><th scope="col">Type</th><th scope="col">Source at inference</th></tr>
+            <tr><th scope="col">Risk class</th><th scope="col">Records</th></tr>
           </thead>
           <tbody>
-            <tr><td>motorcycle_count</td><td class="num">numeric</td><td>Detection, inside ROI</td></tr>
-            <tr><td>total_light_vehicles</td><td class="num">numeric</td><td>Detection, inside ROI</td></tr>
-            <tr><td>total_heavy_vehicles</td><td class="num">numeric</td><td>Detection, inside ROI</td></tr>
-            <tr><td>has_pedestrian</td><td class="num">numeric</td><td>Detection, after rider filtering</td></tr>
-            <tr><td>hour_sin, hour_cos</td><td class="num">numeric</td><td>Clock, encoded cyclically</td></tr>
-            <tr><td>is_weekend</td><td class="num">numeric</td><td>Calendar</td></tr>
-            <tr><td>weather_group</td><td class="num">categorical</td><td>Camera configuration</td></tr>
-            <tr><td>road_type_group</td><td class="num">categorical</td><td>Camera configuration</td></tr>
-            <tr><td>province_clean</td><td class="num">categorical</td><td>Camera configuration</td></tr>
+            <tr><td>Run-off-road</td><td class="num">83,199</td></tr>
+            <tr><td>Rear-end</td><td class="num">46,159</td></tr>
+            <tr><td>Head-on</td><td class="num">6,798</td></tr>
+            <tr><td>Side-impact</td><td class="num">2,138</td></tr>
+            <tr><td>Pedestrian</td><td class="num">1,630</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Encoding the hour as a sine and cosine pair rather than an integer was a small but necessary choice: 23:00 and 00:00 are adjacent in reality and twenty-three apart as integers.</p>
+
+      <p>The largest class holds about <strong>fifty times</strong> the records of the smallest. A model trained naively on that learns to answer "run-off-road" and is right most of the time while being useless for the rare classes — which are exactly the ones a warning system exists for.</p>
+      <p>That decided the metric. We ranked models on <strong>macro recall</strong>, which averages the recall of every class equally no matter how rare it is, with macro F1 as the tie-breaker. Accuracy would have rewarded the lazy answer.</p>
+
+      <h3>Features</h3>
+      <p>The feature set is limited to what a camera can actually supply, which is a shorter list than the accident records contain:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Feature</th><th scope="col">Where it comes from</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Motorcycle count</td><td>Detection, inside the road area</td></tr>
+            <tr><td>Light vehicle count</td><td>Detection, inside the road area</td></tr>
+            <tr><td>Heavy vehicle count</td><td>Detection, inside the road area</td></tr>
+            <tr><td>Pedestrian present</td><td>Detection, after rider filtering</td></tr>
+            <tr><td>Hour, as sine and cosine</td><td>Clock</td></tr>
+            <tr><td>Weekend flag</td><td>Calendar</td></tr>
+            <tr><td>Weather, road type, province</td><td>Set per camera</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Encoding the hour as a sine and cosine pair rather than a plain number was a small but necessary choice: 23:00 and 00:00 are next to each other in reality and twenty-three apart as integers.</p>
     </div>
   </div>
 </section>
@@ -144,17 +158,27 @@
     </div>
     <div class="prose">
       <h3>Choosing a model</h3>
-      <p>I trained a grid of classifiers against a grid of imbalance strategies and compared them on macro recall:</p>
+      <p>I trained four classifiers against four ways of handling the imbalance and ranked every combination on macro recall:</p>
       <ul>
-        <li><strong>Classifiers</strong> — LightGBM, CatBoost, random forest, logistic regression.</li>
-        <li><strong>Imbalance strategies</strong> — none, random oversampling, random undersampling, SMOTE.</li>
+        <li><strong>Classifiers</strong> — LightGBM, XGBoost, CatBoost and random forest.</li>
+        <li><strong>Imbalance handling</strong> — none, random oversampling, random undersampling and SMOTE.</li>
       </ul>
-      <p>LightGBM was selected and exported as a serialised pipeline, then loaded by the computer-vision application at startup. Gradient boosting on tabular features with mixed numeric and categorical columns is a well-matched choice here, and it is fast enough to call on every prediction interval without becoming the bottleneck.</p>
+      <p><strong>LightGBM with random oversampling</strong> came out on top. Resampling made the biggest difference to the rare classes: head-on and side-impact recall improved substantially compared with training on the raw distribution.</p>
 
-      <div class="callout">
-        <span class="mono">On the headline number</span>
-        <p>I am deliberately not quoting a single accuracy figure for this project. My own project documents currently disagree about which evaluation run is the official result, and one summary slide reports a validation score in a place that reads like a test score. Until I have reconciled them I would rather describe the method than publish a number I cannot defend in an interview.</p>
+      <div class="table-wrap">
+        <table>
+          <caption class="mono" style="text-align:left;padding-bottom:.75rem;color:var(--muted)">Final selected model</caption>
+          <tbody>
+            <tr><th scope="row">Model</th><td>LightGBM</td></tr>
+            <tr><th scope="row">Imbalance handling</th><td>Random oversampling</td></tr>
+            <tr><th scope="row">Selection rule</th><td>Macro recall first, macro F1 as tie-breaker</td></tr>
+            <tr><th scope="row">Test macro recall</th><td class="num"><strong>0.7582</strong></td></tr>
+          </tbody>
+        </table>
       </div>
+
+      <p>Run-off-road and pedestrian end up the easiest classes to get right. <strong>Side-impact is still the hardest</strong>, and the reason is visible in the feature list above: telling an intersection conflict from ordinary traffic really needs direction and turning movement, and the current features only count what is present, not where it is going.</p>
+      <p>The selected model is exported as a serialised pipeline and loaded by the camera application at start-up, which keeps a prediction cheap enough to run continuously.</p>
     </div>
   </div>
 </section>
@@ -167,16 +191,16 @@
     </div>
     <div class="prose">
       <h3>Making the detector behave</h3>
-      <p>The model was the easy half. The hard half was that a detector pointed at a real road sees a great deal that is none of its business, and every one of those mistakes becomes a wrong feature value and then a wrong warning.</p>
+      <p>The model was the easy half. A detector pointed at a real road sees a great deal that is none of its business, and every one of those mistakes becomes a wrong number in the feature row and then a wrong warning.</p>
 
       <ul>
-        <li><strong>The opposite carriageway.</strong> The camera sees both directions. Traffic on the far side was inflating vehicle counts for a road segment it had nothing to do with. I defined a road region of interest as a polygon and a detection line, and discarded every detection outside them — visible as the blue outline and yellow line in the frames above.</li>
-        <li><strong>Riders counted as pedestrians.</strong> YOLO correctly detects a motorcycle rider as a person. The feature vector then recorded a pedestrian on a road with no one walking on it, and <code>has_pedestrian</code> is a strong signal, so the system confidently warned about pedestrians over empty tarmac. I added rider filtering that associates a person detection with the motorcycle underneath it, plus a separate pedestrian-presence validation step before the flag is set.</li>
-        <li><strong>Flicker between frames.</strong> A single frame is a noisy sample. Introducing ByteTrack gave objects persistent identities and movement history, which made counts stable and opened up direction and trajectory work.</li>
-        <li><strong>Warning responsiveness.</strong> Predicting on every frame is wasteful and makes the overlay jitter; predicting too rarely makes it stale. I tuned the prediction-update interval between those two failures.</li>
+        <li><strong>The opposite carriageway.</strong> The camera sees both directions, and traffic on the far side was inflating counts for a road it had nothing to do with. I marked the monitored road as a polygon and added a detection line to cut off distant, unstable detections — the cyan outline in the frame above.</li>
+        <li><strong>Riders counted as pedestrians.</strong> YOLO is right that a motorcycle rider is a person, but the feature row then claimed someone was walking on an empty road, and the pedestrian flag is a strong signal. Two rules fixed it: a person overlapping a motorcycle is a rider, not a pedestrian, and a person outside the road area does not count either. That second rule is what you can see working in the frame above.</li>
+        <li><strong>Flicker between frames.</strong> A single frame is a noisy sample. ByteTrack gave every object a lasting identity, which steadied the counts and opened the door to direction and trajectory work later.</li>
+        <li><strong>A crowded overlay.</strong> The first version printed everything over the video and was unreadable. It became a compact panel: the call on one side, the numbers behind it on the other.</li>
       </ul>
 
-      <p>The theme across all four is the same: the cheapest reliable fix was to narrow what the system is allowed to look at, not to make the model larger.</p>
+      <p>The pattern across all four is the same — the cheap, reliable fix was to narrow what the system is allowed to look at, not to reach for a bigger model.</p>
     </div>
   </div>
 </section>
@@ -188,37 +212,40 @@
     </div>
     <div class="prose">
       <h3>Turning a prediction into a warning</h3>
-      <p>A class label on its own is not useful to someone watching a monitor. The prototype maps the model's confidence onto three warning levels, each with plain-language text:</p>
+      <p>The model returns a probability for each class and the highest one is taken. A warning only appears if that probability clears <strong>0.55</strong>; below it the board reads DRIVE SAFELY.</p>
 
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th scope="col">Confidence</th><th scope="col">Level</th><th scope="col">Example message</th></tr>
+            <tr><th scope="col">Confidence</th><th scope="col">Warning level</th><th scope="col">What is shown</th></tr>
           </thead>
           <tbody>
             <tr><td class="num">below 0.55</td><td>Normal</td><td>DRIVE SAFELY</td></tr>
-            <tr><td class="num">0.55 – 0.80</td><td>Medium</td><td>SLOW DOWN</td></tr>
-            <tr><td class="num">0.80 and above</td><td>High</td><td>KEEP DISTANCE / PEDESTRIAN AHEAD</td></tr>
+            <tr><td class="num">0.55 – 0.79</td><td>Medium</td><td>The predicted risk type</td></tr>
+            <tr><td class="num">0.80 and above</td><td>High</td><td>The predicted risk type</td></tr>
           </tbody>
         </table>
       </div>
 
-      <p>Every prediction is also appended to a CSV event log with its timestamp, stream position, camera ID, risk type, confidence, warning level and the full feature vector that produced it. That log is what makes the prototype debuggable — when a warning looks wrong, the row tells you which counts caused it.</p>
+      <p>That 0.55 is an application setting, not something from training. We started at 0.50, found during demo runs that it flipped between messages too readily, and nudged it up until the board held still.</p>
+      <p>Each class maps to wording a driver can act on rather than a label:</p>
 
       <div class="table-wrap">
         <table>
-          <caption class="mono" style="text-align:left;padding-bottom:.75rem;color:var(--ink-3)">Sample rows from an actual logged run</caption>
           <thead>
-            <tr><th scope="col">Stream</th><th scope="col">Risk type</th><th scope="col">Conf.</th><th scope="col">Level</th><th scope="col">Motorcycles</th><th scope="col">Light</th><th scope="col">Heavy</th></tr>
+            <tr><th scope="col">Predicted risk</th><th scope="col">Signboard message</th></tr>
           </thead>
           <tbody>
-            <tr><td class="num">7.07 s</td><td>Rear-end</td><td class="num">0.5749</td><td>Medium</td><td class="num">5</td><td class="num">4</td><td class="num">0</td></tr>
-            <tr><td class="num">13.10 s</td><td>Pedestrian</td><td class="num">0.9432</td><td>High</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
-            <tr><td class="num">17.10 s</td><td>Rear-end</td><td class="num">0.8271</td><td>High</td><td class="num">0</td><td class="num">5</td><td class="num">1</td></tr>
-            <tr><td class="num">21.10 s</td><td>Rear-end</td><td class="num">0.7955</td><td>Medium</td><td class="num">0</td><td class="num">3</td><td class="num">0</td></tr>
+            <tr><td>Rear-end</td><td>SLOW DOWN / KEEP DISTANCE</td></tr>
+            <tr><td>Side-impact</td><td>SLOW DOWN / CHECK BOTH SIDES</td></tr>
+            <tr><td>Pedestrian</td><td>PEDESTRIAN AHEAD / SLOW DOWN</td></tr>
+            <tr><td>Run-off-road</td><td>REDUCE SPEED / DRIVE CAREFULLY</td></tr>
+            <tr><td>Head-on</td><td>KEEP LEFT / DO NOT OVERTAKE</td></tr>
           </tbody>
         </table>
       </div>
+
+      <p>Holding a message steady needed its own settings: predictions update once a second, smoothed over the last two, a message stays up for at least two seconds, and an empty road reverts to DRIVE SAFELY after three. Every call is also appended to a CSV log with its timestamp, class, confidence, level and the counts behind it — which is what makes a wrong warning diagnosable rather than mysterious.</p>
     </div>
   </div>
 </section>
@@ -229,17 +256,20 @@
       <span class="mono">07 / Status</span>
     </div>
     <div class="prose">
-      <h3>What is actually verified</h3>
+      <h3>Where it actually stands</h3>
       <p>Being precise about this matters more than making it sound finished.</p>
       <ul>
-        <li><strong>Verified.</strong> The end-to-end path runs on recorded traffic footage: detection, filtering, feature extraction, model inference, on-screen warning and CSV logging all work together, with logged event rows and saved output frames as evidence.</li>
-        <li><strong>Not verified.</strong> The system has never run on a live public road. It has not been independently evaluated, and there is no measurement of whether it would change driver behaviour or prevent anything.</li>
-        <li><strong>Still open.</strong> Movement and trajectory analysis, a fuller monitoring interface, multiple camera configurations, richer context integration and a complete system evaluation are the final-semester work.</li>
+        <li><strong>Working.</strong> The whole path runs: detection, filtering, feature row, model call, on-screen warning, LED signboard and CSV log, with logged events and saved frames as evidence.</li>
+        <li><strong>Not established.</strong> It has never run on a live public road, nobody outside the team has evaluated it, and there is no measurement of whether it would change how anyone drives.</li>
+        <li><strong>Known weak spot.</strong> Side-impact and head-on are still hard to tell apart, because the features count what is present rather than where it is heading.</li>
       </ul>
 
+      <h3>What comes next</h3>
+      <p>What is shown here is the pre-project prototype, and the work is continuing. We have not been able to test it across different roads, camera angles or lighting yet, mostly because we could not get hold of suitable CCTV footage. This semester the main change is dropping the hand-drawn road region altogether and evaluating the whole scene the camera can see, which should also remove the per-camera setup step. Direction and speed features are the other thread, since that is what side-impact needs.</p>
+
       <h3>Who did what</h3>
-      <p>Three students, with me as project manager. I did the majority of the hands-on work — dataset preparation, feature engineering, model training and selection, the computer-vision integration, the filtering logic and the troubleshooting. My teammates, Sai Zaw Linn and Min Maung Maung, contributed research, review, testing and presentation materials. Our advisor is Asst. Prof. Dr. Pattaramon Vuttipittayamongkol.</p>
-      <p>The code is not yet public. It carries trained model artifacts and coursework material belonging to other groups, so it needs separating before anything is published.</p>
+      <p>Three students, with me as project manager. I did most of the hands-on work — dataset preparation, feature design, model training and selection, the computer-vision integration, the filtering logic and the debugging. My teammates, Sai Zaw Linn and Min Maung Maung, contributed research, review, testing and presentation material. Our advisor is Asst. Prof. Dr. Pattaramon Vuttipittayamongkol.</p>
+      <p>The code is not public yet. It carries trained model files and coursework belonging to other groups, so it needs separating first.</p>
 
       <div class="links" style="margin-top:2.5rem">
         <a class="link" href="../index.html#work">
