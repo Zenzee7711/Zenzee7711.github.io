@@ -19,6 +19,19 @@ const cards = projects.map((project,index) => {
   return `<article class="project-card" data-category="${escape(project.category)}">${visual}<div class="project-card-body"><div class="project-meta"><span>${escape(project.type)}</span><span>${escape(project.year)}</span></div><h3>${escape(project.title)}</h3><p>${escape(project.summary)}</p><p class="project-role">${escape(project.role)}</p><ul class="tags">${project.tags.map(tag=>`<li>${escape(tag)}</li>`).join('')}</ul>${action}</div></article>`;
 }).join('');
 let html = await read('index.template.html');
+// Characters like U+2197 and U+2733 have emoji presentation, so phones render
+// them as colour emoji instead of text glyphs. Use an inline SVG icon instead.
+const emojiGlyphs = [...'\u2733\u2197\u2198\u2199\u2196\u2191\u2193\u2192\u2190'];
+for (const [file, text] of [['index.template.html', html], ['projects.json', JSON.stringify(projects)]]) {
+  const found = emojiGlyphs.filter(c => text.includes(c));
+  if (found.length) {
+    throw new Error(
+      `${file} contains ${found.map(c => 'U+' + c.codePointAt(0).toString(16).toUpperCase()).join(', ')} ` +
+      `(${found.join(' ')}). Phones draw these as emoji. Replace with an inline <svg class='ico'> icon.`
+    );
+  }
+}
+
 html = html.replace('{{PROJECTS}}',cards).replace('{{COUNT}}',projects.length);
 await writeFile(new URL('dist/index.html',root),html);
 await writeFile(new URL('dist/projects-data.js',root),`window.portfolioProjects = ${JSON.stringify(projects).replace(/</g,'\\u003c')};\n`);
