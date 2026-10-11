@@ -212,7 +212,18 @@
     </div>
     <div class="prose">
       <h3>Turning a prediction into a warning</h3>
+      <p>A class name and a probability are no use to anyone on the road. The end of the pipeline is a <strong>virtual LED signboard</strong> — the part road users would actually read — alongside the overlay on the monitoring screen.</p>
       <p>The model returns a probability for each class and the highest one is taken. A warning only appears if that probability clears <strong>0.55</strong>; below it the board reads DRIVE SAFELY.</p>
+
+      <figure style="margin:28px 0">
+        <div class="frame">
+          <picture>
+            <source type="image/webp" srcset="../assets/led-signboard-640.webp 640w, ../assets/led-signboard.webp 1100w" sizes="(max-width: 900px) 92vw, 900px">
+            <img src="../assets/led-signboard.jpg" width="1100" height="219" alt="The virtual LED signboard: LEVEL: HIGH in red, and PEDESTRIAN AHEAD / SLOW DOWN in yellow, on a black board." loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <figcaption>The signboard as it appears during a run. The red line is the warning level, which comes from the confidence band; the yellow line is the instruction, which comes from the predicted class. Here the model put a pedestrian risk above 0.80, so the board shows HIGH and the wording that goes with it.</figcaption>
+      </figure>
 
       <div class="table-wrap">
         <table>
