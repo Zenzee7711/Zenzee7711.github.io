@@ -1,0 +1,69 @@
+[
+  {
+    "id": "road",
+    "category": "ai",
+    "type": "Computer vision / ML",
+    "year": "2026 · Ongoing",
+    "title": "Road accident-risk warning",
+    "summary": "A roadside prototype that reads traffic footage and classifies accident-risk types using computer vision and machine learning.",
+    "role": "Project manager & primary developer · Team of three",
+    "tags": [
+      "Python",
+      "YOLO",
+      "LightGBM",
+      "OpenCV"
+    ],
+    "image": "assets/road-thumbnail.png",
+    "imageAlt": "Senior-project traffic detection output with vehicle boxes and a blue road-region boundary",
+    "imageCaption": "Actual prototype output",
+    "href": "work/road-risk.html"
+  },
+  {
+    "id": "booking",
+    "category": "software",
+    "type": "Web / Mobile",
+    "year": "2025",
+    "title": "University room booking",
+    "summary": "A web and mobile system for finding rooms, making reservations, and managing approvals for students, lecturers, and staff.",
+    "role": "One of the primary developers",
+    "tags": [
+      "Node.js",
+      "MySQL",
+      "Flutter"
+    ],
+    "visual": "booking",
+    "details": "<p>The project started as a web application and was later extended into a Flutter mobile app using the same backend.</p><h3>My contribution</h3><p>I worked on the interface, application functionality, backend integration, and testing. I also tested mobile booking flows on an iOS simulator.</p><h3>How it works</h3><p>Students browse rooms and request a booking. Role-based approval flows let lecturers and staff review reservations and manage access. Node.js, Express, and MySQL support the backend; Flutter provides the mobile interface.</p><p>This was an academic team project, not a university-wide production deployment. The graphic on this portfolio is an explanatory illustration.</p><p><a href='https://github.com/Zenzee7711/library-room-reservation-web' target='_blank' rel='noopener noreferrer'>Web repository ↗</a> &nbsp; <a href='https://github.com/Zenzee7711/library-room-booking-mobile' target='_blank' rel='noopener noreferrer'>Mobile repository ↗</a></p>"
+  },
+  {
+    "id": "flight",
+    "category": "ai",
+    "type": "Data / Machine learning",
+    "year": "2026 · Course project",
+    "title": "Flight-delay analytics",
+    "summary": "Flight-delay classification on roughly 450,000 historical records, connected to a Kafka streaming prediction prototype.",
+    "role": "Model training, evaluation & testing",
+    "tags": [
+      "PySpark",
+      "Spark MLlib",
+      "Kafka"
+    ],
+    "visual": "flight",
+    "details": "<p>A Big Data Management and Analytics team project using PySpark and Spark MLlib to explore flight-delay classification.</p><h3>My contribution</h3><p>I trained, evaluated, and tested classification models and tested the streaming prediction path. Teammates led data cleaning, feature engineering, and Kafka producer/consumer integration.</p><h3>What we compared</h3><p>Logistic regression, decision trees, random forests, and gradient-boosted trees were evaluated with different class-balancing strategies. Delayed flights were the minority class, so PR-AUC was more useful than reporting accuracy alone.</p><p>The selected approach was gradient-boosted trees with oversampling. This was a completed course project and streaming prototype.</p>"
+  },
+  {
+    "id": "robot",
+    "category": "hardware",
+    "type": "Hardware / Prototyping",
+    "year": "2026 · Ongoing",
+    "title": "Ka-Naung robotic dog",
+    "summary": "A collaborative robot-dog prototype. My part is testing servos, assessing power requirements, and helping assemble the hardware.",
+    "role": "Hardware development & testing",
+    "tags": [
+      "MG995 servos",
+      "Power budgeting",
+      "Soldering"
+    ],
+    "visual": "robot",
+    "details": "<p>Ka-Naung Pet Dog is an ongoing team hardware project.</p><h3>My contribution</h3><ul><li>Testing MG995 servo motors for correct operation.</li><li>Evaluating power requirements, battery capacity, and suitable battery types.</li><li>Helping with soldering, assembly, and PCB and remote-control connection planning.</li></ul><p>My work focuses on hardware development and testing. The robot is still a collaborative prototype, rather than a finished product.</p>"
+  }
+]

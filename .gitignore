@@ -1,0 +1,9 @@
+node_modules/
+
+# local working files, not part of the published site
+previous-design/
+preview.jpg
+preview-updated.jpg
+redesign-preview.png
+exchange-preview.jpg
+*.log
