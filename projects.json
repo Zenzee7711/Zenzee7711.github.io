@@ -31,8 +31,10 @@
       "MySQL",
       "Flutter"
     ],
-    "visual": "booking",
-    "details": "<p>The project started as a web application and was later extended into a Flutter mobile app using the same backend.</p><h3>My contribution</h3><p>I worked on the interface, application functionality, backend integration, and testing. I also tested mobile booking flows on an iOS simulator.</p><h3>How it works</h3><p>Students browse rooms and request a booking. Role-based approval flows let lecturers and staff review reservations and manage access. Node.js, Express, and MySQL support the backend; Flutter provides the mobile interface.</p><p>This was an academic team project, not a university-wide production deployment. The graphic on this portfolio is an explanatory illustration.</p><p><a href='https://github.com/Zenzee7711/library-room-reservation-web' target='_blank' rel='noopener noreferrer'>Web repository <svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4.5 11.5 11.5 4.5M6.2 4.5h5.3v5.3'/></svg></a> &nbsp; <a href='https://github.com/Zenzee7711/library-room-booking-mobile' target='_blank' rel='noopener noreferrer'>Mobile repository <svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4.5 11.5 11.5 4.5M6.2 4.5h5.3v5.3'/></svg></a></p>"
+    "details": "<p>The project started as a web application and was later extended into a Flutter mobile app using the same backend.</p><h3>My contribution</h3><p>I worked on the interface, application functionality, backend integration, and testing. I also tested mobile booking flows on an iOS simulator.</p><h3>How it works</h3><p>Students browse rooms and request a booking. Role-based approval flows let lecturers and staff review reservations and manage access. Node.js, Express, and MySQL support the backend; Flutter provides the mobile interface.</p><p>This was an academic team project, not a university-wide production deployment. The thumbnail combines the web and mobile interfaces in a presentation mockup.</p><p><a href='https://github.com/Zenzee7711/library-room-reservation-web' target='_blank' rel='noopener noreferrer'>Web repository <svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4.5 11.5 11.5 4.5M6.2 4.5h5.3v5.3'/></svg></a> &nbsp; <a href='https://github.com/Zenzee7711/library-room-booking-mobile' target='_blank' rel='noopener noreferrer'>Mobile repository <svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4.5 11.5 11.5 4.5M6.2 4.5h5.3v5.3'/></svg></a></p>",
+    "image": "assets/room-reservation-thumbnail.png",
+    "imageAlt": "Room reservation web login alongside mobile room-management and reservation screens in a combined device mockup",
+    "imageCaption": "Web and mobile app preview"
   },
   {
     "id": "flight",
@@ -40,15 +42,17 @@
     "type": "Data / Machine learning",
     "year": "2026 · Course project",
     "title": "Flight-delay analytics",
-    "summary": "Flight-delay classification on roughly 450,000 historical records, connected to a Kafka streaming prediction prototype.",
+    "summary": "Flight-delay classification trained on historical records, with a Kafka prototype that takes user-entered flight details and returns a model prediction.",
     "role": "Model training, evaluation & testing",
     "tags": [
       "PySpark",
       "Spark MLlib",
       "Kafka"
     ],
-    "visual": "flight",
-    "details": "<p>A Big Data Management and Analytics team project using PySpark and Spark MLlib to explore flight-delay classification.</p><h3>My contribution</h3><p>I trained, evaluated, and tested classification models and tested the streaming prediction path. Teammates led data cleaning, feature engineering, and Kafka producer/consumer integration.</p><h3>What we compared</h3><p>Logistic regression, decision trees, random forests, and gradient-boosted trees were evaluated with different class-balancing strategies. Delayed flights were the minority class, so PR-AUC was more useful than reporting accuracy alone.</p><p>The selected approach was gradient-boosted trees with oversampling. This was a completed course project and streaming prototype.</p>"
+    "details": "<p>A Big Data Management and Analytics team project combining PySpark model training with a Kafka-based prediction prototype.</p><h3>My contribution</h3><p>I trained, evaluated, and tested classification models and tested the streaming prediction flow. Teammates led data cleaning, feature engineering, and Kafka producer/consumer integration.</p><h3>From flight details to a prediction</h3><p>The Python producer asks for the airline, origin and destination airports, flight date, scheduled departure time, and duration. It derives the date and time features and sends the flight details as a JSON message through Kafka.</p><p>The consumer receives each message, applies the airport grouping saved during training, and passes the input to the saved PySpark model. It prints an on-time or delayed prediction and the model's delay probability in the terminal.</p><p>This demonstrates streaming inference on user-entered flights. It does not pull live airline status or send passenger notifications.</p><h3>Model training and evaluation</h3><p>We used 454,414 cleaned historical flight records from 2023, treating a departure delay of 15 minutes or more as delayed. We compared logistic regression, decision trees, random forests, and gradient-boosted trees with different class-balancing strategies. Delayed flights were the minority class, so PR-AUC was the main comparison metric.</p><p>Gradient-boosted trees with oversampling performed best in our course experiments. The project is an academic prediction prototype.</p><p><a href='https://github.com/Zenzee7711/flight-delay-analytics' target='_blank' rel='noopener noreferrer'>GitHub repository <svg class='ico' width='16' height='16' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4.5 11.5 11.5 4.5M6.2 4.5h5.3v5.3'/></svg></a></p>",
+    "image": "assets/flight-delay-thumbnail.png",
+    "imageAlt": "Flight delay analytics illustration: user input passes through Kafka to a trained model and a terminal prediction",
+    "imageCaption": "Streaming prediction / project illustration"
   },
   {
     "id": "robot",
@@ -63,7 +67,9 @@
       "Power budgeting",
       "Soldering"
     ],
-    "visual": "robot",
-    "details": "<p>Ka-Naung Pet Dog is an ongoing team hardware project.</p><h3>My contribution</h3><ul><li>Testing MG995 servo motors for correct operation.</li><li>Evaluating power requirements, battery capacity, and suitable battery types.</li><li>Helping with soldering, assembly, and PCB and remote-control connection planning.</li></ul><p>My work focuses on hardware development and testing. The robot is still a collaborative prototype, rather than a finished product.</p>"
+    "details": "<p>Ka-Naung Pet Dog is an ongoing team hardware project.</p><h3>My contribution</h3><ul><li>Testing MG995 servo motors for correct operation.</li><li>Evaluating power requirements, battery capacity, and suitable battery types.</li><li>Helping with soldering, assembly, and PCB and remote-control connection planning.</li></ul><p>My work focuses on hardware development and testing. The robot is still a collaborative prototype, rather than a finished product.</p><h3>Current status</h3><p>The thumbnail shows a design reference for the direction we are exploring, not our completed robot or an original render of our build. Development is ongoing, and the project code is not publicly available yet.</p>",
+    "image": "assets/robot-dog-design-reference.png",
+    "imageAlt": "Yellow and black quadruped robot rendering used as a design reference, not a photo of our prototype",
+    "imageCaption": "Design reference · prototype in progress"
   }
 ]
