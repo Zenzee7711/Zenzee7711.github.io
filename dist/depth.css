@@ -1,0 +1,28 @@
+/* Local depth experiment: transforms only, with a static fallback. */
+.depth-switch{position:fixed;right:24px;bottom:24px;z-index:25;display:flex;align-items:center;gap:10px;padding:10px 17px;min-height:44px;border:1px solid var(--line);border-radius:30px;background:var(--surface);color:var(--text);box-shadow:0 6px 24px #0002;font:12px 'IBM Plex Mono',monospace}
+.depth-switch::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.depth-switch[aria-pressed=true]::before{background:var(--accent)}
+.depth-switch:disabled{opacity:.7;cursor:default}
+.depth-enabled .depth-surface{transform:perspective(1100px) rotateX(var(--depth-x,0deg)) rotateY(var(--depth-y,0deg)) translateY(var(--depth-lift,0px));transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;transform-style:preserve-3d;backface-visibility:hidden}
+.depth-enabled .depth-surface.depth-active{transition:transform .12s ease-out,box-shadow .4s;box-shadow:calc(var(--depth-shadow,0px) * -1) 24px 45px -22px #0007}
+.depth-enabled .portrait-panel{animation:none;border:1px solid #ffffff38;box-shadow:18px 24px 0 -12px var(--bg),19px 25px 0 -12px var(--line),0 30px 65px -35px #0008}
+.depth-enabled .portrait-panel>img{translate:calc(var(--depth-pan,0px) * 1.5) 0;transition:translate .25s ease-out}
+.depth-enabled .portrait-panel figcaption{translate:calc(var(--depth-pan,0px) * -.8) 0;transition:translate .25s ease-out;box-shadow:0 10px 24px #17323b24}
+.depth-enabled .portrait-circle{box-shadow:0 0 0 35px #ffffff14,0 0 0 70px #ffffff0a}
+.depth-enabled .project-card{position:relative}
+.depth-enabled .project-card::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--depth-light,50% 30%),#ffffff18,transparent 55%);opacity:0;transition:opacity .3s}
+.depth-enabled .project-card.depth-active::after{opacity:1}
+.depth-enabled .project-image img{transition:scale .45s ease}
+.depth-enabled .project-card.depth-active .project-image img{scale:1.025}
+.depth-orbit{position:absolute;right:24px;top:26px;width:96px;height:96px;perspective:500px;pointer-events:none;opacity:.8}
+.depth-orbit-core{position:absolute;inset:25px;transform-style:preserve-3d;transform:rotateX(-24deg) rotateY(32deg)}
+.depth-enabled .depth-orbit-core{transform:rotateX(calc(-24deg + var(--depth-x,0deg) * 3)) rotateY(calc(32deg + var(--depth-y,0deg) * 4));transition:transform .3s}
+.depth-orbit-core i{position:absolute;inset:0;border:1px solid #346757;background:#c6dfd580}
+.depth-orbit-core i:nth-child(1){transform:translateZ(23px)}
+.depth-orbit-core i:nth-child(2){transform:rotateY(90deg) translateZ(23px)}
+.depth-orbit-core i:nth-child(3){transform:rotateY(180deg) translateZ(23px)}
+.depth-orbit-core i:nth-child(4){transform:rotateY(-90deg) translateZ(23px)}
+.depth-orbit-core i:nth-child(5){transform:rotateX(90deg) translateZ(23px)}
+.depth-orbit-core i:nth-child(6){transform:rotateX(-90deg) translateZ(23px)}
+@media(hover:none),(pointer:coarse){.depth-switch{right:12px;bottom:12px}.depth-enabled .depth-surface{transform:none!important}.depth-orbit{width:76px;height:76px;right:12px;top:18px}}
+@media(prefers-reduced-motion:reduce){.depth-surface,.depth-orbit-core,.portrait-panel>img,.portrait-panel figcaption,.project-image img{transition:none!important;translate:none!important}.depth-enabled .depth-surface{transform:none!important}.depth-enabled .project-card.depth-active .project-image img{scale:1}}

@@ -1,0 +1,21 @@
+.skill-keyboard-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,1fr);gap:50px;align-items:center;margin:20px 0 55px}
+.skill-keyboard-stage{perspective:1500px;min-width:0;padding:35px 45px 15px}
+.skill-keyboard{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;padding:22px;background:#172128;border:1px solid #43515d;border-radius:18px;transform:rotateX(38deg) rotateZ(-27deg);transform-style:preserve-3d;box-shadow:0 14px 0 #0c151e,0 16px 0 #394852,10px 40px 40px #0004;margin:20px auto 55px;max-width:510px}
+.skill-key{position:relative;min-width:0;aspect-ratio:1;border:0!important;border-radius:13px;background:color-mix(in srgb,var(--key-color) 65%,#172128);display:block;transform-style:preserve-3d;transform:translateZ(10px);box-shadow:0 12px 0 color-mix(in srgb,var(--key-color) 58%,#13212e),0 15px 6px #0006;cursor:pointer;padding:0;transition:transform .16s,box-shadow .16s}
+.skill-key-face{position:absolute;inset:0 0 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:12px;background:var(--key-color);box-shadow:inset 0 2px 1px #fff8,inset 0 -5px 7px #0002,inset 3px 0 5px #fff3;padding:7px;color:#14252f}
+.skill-key:hover{transform:translateZ(15px) translateY(-3px)}
+.skill-key:focus-visible{outline:3px solid var(--accent);outline-offset:7px}
+.skill-key:active,.skill-key[aria-pressed=true]{transform:translateZ(2px) translateY(8px);box-shadow:0 4px 0 color-mix(in srgb,var(--key-color) 58%,#13212e),0 5px 4px #0005}
+.skill-key[aria-pressed=true] .skill-key-face{box-shadow:inset 0 0 0 2px #ffffffb0,inset 0 -3px 6px #0002}
+.skill-key-logo{width:clamp(25px,3vw,42px);height:clamp(25px,3vw,42px);object-fit:contain;filter:drop-shadow(0 1px 0 #fff4);pointer-events:none}
+.skill-key-label{font:9px 'IBM Plex Mono',monospace;line-height:1.15;text-align:center;white-space:nowrap}
+.keyboard-signature{align-self:center;text-align:center;color:#a9bdc7;font:600 22px 'DM Sans',sans-serif;transform:translateZ(2px)}
+.keyboard-hint{text-align:center;font-size:10px;color:var(--muted);letter-spacing:.1em;margin-top:45px}
+.skill-key-info{border-left:2px solid var(--accent);padding:10px 0 10px 25px;min-height:220px}
+.skill-key-info h3{font-size:38px;margin:15px 0}.skill-key-info p{font-size:16px;max-width:330px}.skill-key-info .key-instruction{font-size:12px;margin-top:24px}
+.skills-coursework{margin-top:18px!important;font-size:14px!important}
+.skill-chips li:has(img){display:inline-flex;align-items:center;gap:7px}.skill-chips img{object-fit:contain;background:#f3f2ed;border-radius:4px;padding:2px;box-sizing:content-box}
+@media(max-width:1000px){.skill-keyboard-layout{grid-template-columns:1fr;gap:5px}.skill-keyboard-stage{max-width:630px;width:100%;margin:auto}.skill-key-info{min-height:170px}.skill-key-info p{max-width:none}}
+@media(max-width:550px){.skill-keyboard-stage{padding:10px 10px 15px}.skill-keyboard{transform:rotateX(15deg) rotateZ(-5deg);gap:10px;padding:13px;margin:12px auto 25px;border-radius:14px}.skill-key{border-radius:9px}.skill-key-face{border-radius:8px;padding:4px}.skill-key-label{font-size:7px}.skill-key-logo{width:27px;height:27px}.keyboard-hint{margin-top:25px;font-size:9px}.skill-key-info h3{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.skill-key{transition:none}.skill-key:hover{transform:translateZ(10px)}.skill-keyboard{transform:none}}
+@media(max-width:400px){.skill-keyboard{grid-template-columns:repeat(4,minmax(0,1fr));transform:none}.skill-key{min-height:48px}.skill-key-label{font-size:8px}}
