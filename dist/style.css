@@ -53,3 +53,5 @@
 .project-next{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:26px 0}
 .primary:hover{transform:none}
 @media(min-width:901px){.section{padding-top:88px;padding-bottom:88px}}
+
+.project-destinations{display:flex;flex-wrap:wrap;gap:12px 24px;margin:20px 0 0;font-size:14px}.project-destinations a{text-decoration:underline;text-underline-offset:5px;color:var(--accent)}.project-card:has(.project-destinations) .project-image img{object-fit:cover;object-position:top;background:#eef0ee}

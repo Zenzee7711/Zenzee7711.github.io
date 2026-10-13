@@ -19,6 +19,48 @@
     "href": "work/road-risk.html"
   },
   {
+    "id": "whatrweplaying",
+    "category": "software",
+    "type": "Web app / AI search",
+    "year": "2026 · Live",
+    "title": "WhatRWePlaying",
+    "summary": "Find a PC game for yourself or your group by player count, budget, and preferences. Describe what you want or use filters, then compare prices across stores.",
+    "role": "Personal project · Web development & API integration",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "image": "assets/whatrweplaying-preview.png",
+    "imageAlt": "WhatRWePlaying interface with game search, filters, and matching game cards",
+    "imageCaption": "Application screenshot",
+    "liveUrl": "https://whatrweplaying.vercel.app/",
+    "repoUrl": "https://github.com/Zenzee7711/whatrweplaying",
+    "details": "<p>I wanted a quicker way to find something to play with friends without checking each game and store separately.</p><h3>What you can do</h3><p>Search by group size, play mode, genre, and budget, or describe the kind of game you want. Compare available store offers and share a shortlist with friends. The app recommends games and links to stores; it does not sell them.</p><h3>Under the hood</h3><p>Next.js, React, TypeScript, and Tailwind CSS power the interface. Server routes handle Groq-powered language requests and IGDB lookups. Zod validates structured input and model output. Multiplayer information comes from PCGamingWiki and reviewed sources, while CheapShark supplies store prices.</p><p>The language model suggests filters and games, not prices or player counts. A keyword fallback keeps search usable when AI is unavailable. Vitest covers the search and supporting logic.</p><p>Current scope is PC games. Prices are in USD, store coverage is limited to the data providers, and unconfirmed group sizes are labelled.</p>"
+  },
+  {
+    "id": "thai-stay",
+    "category": "software",
+    "type": "Web app / Personal utility",
+    "year": "2026 · Live",
+    "title": "Thai Stay",
+    "summary": "A tracker for Thailand 90-day reports and permitted-stay dates, with a timeline, upcoming deadlines, and calendar reminders. Dates stay in your browser.",
+    "role": "Personal project · Web development & date logic",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "image": "assets/thai-stay-preview.png",
+    "imageAlt": "Thai Stay homepage showing report and stay date inputs",
+    "imageCaption": "Application screenshot",
+    "liveUrl": "https://thai-stay-one.vercel.app/",
+    "repoUrl": "https://github.com/Zenzee7711/thai_stay",
+    "details": "<p>I built Thai Stay for my own use as an international student in Thailand, and to share with friends and juniors who are getting used to the reporting process.</p><h3>What you can do</h3><p>Enter your arrival date, permitted-until date, and the next report date from your receipt. The app shows a timeline and reporting windows, helps find an immigration office, and lets you add dates to Google Calendar or export them for Apple Calendar and Outlook.</p><h3>Under the hood</h3><p>The app uses Next.js, React, TypeScript, Tailwind CSS, and date-fns. Dates are stored in browser localStorage; no account or application database is needed. Vitest tests cover date calculations and supporting logic.</p><p>It is a personal planning tool, not an official immigration service. Users still need to check their documents and current Immigration guidance.</p>"
+  },
+  {
     "id": "booking",
     "category": "software",
     "type": "Web / Mobile",

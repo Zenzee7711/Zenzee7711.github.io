@@ -1,8 +1,12 @@
 (() => {
  const section=document.querySelector('#skills .section');
  if(!section)return;
- // Representative tools from the current resume. The complete list remains below.
+ // Representative tools from my projects and coursework. The complete list remains below.
  const keys=[
+ ['TS','TypeScript','Web development','#3178c6','Used in Thai Stay and WhatRWePlaying for typed components, application data, and server routes.'],
+ ['Re','React','Web development','#61dafb','Used for the interactive timeline in Thai Stay and the filters, results, and shortlist in WhatRWePlaying.'],
+ ['Nx','Next.js','Web development','#444444','The framework behind both live apps. WhatRWePlaying also uses its server routes for AI search and game lookups.'],
+ ['Tw','Tailwind CSS','Web development','#38bdf8','Used for responsive layouts and interface styling in Thai Stay and WhatRWePlaying.'],
  ['Py','Python','ML & data','#315d86','I use Python for model training, computer vision, and data-processing projects.'],
  ['JS','JavaScript','Software','#786115','Used in web interfaces and the Node.js room-reservation backend.'],
  ['Da','Dart','Software','#126a83','The language behind the Flutter mobile room-booking app.'],
@@ -30,7 +34,7 @@
  ];
 
  // The keyboard is a representative selection; all resume skills remain in the panels.
- const logos={'Python':'python','JavaScript':'javascript','Dart':'dart','HTML/CSS':'html5','Node.js':'nodejs','Express':'express','Flutter':'flutter','MySQL':'mysql','scikit-learn':'scikitlearn','OpenCV':'opencv','PySpark':'apachespark','Kafka':'apachekafka','Git':'git','Docker':'docker','Linux':'linux','Java':'java','C#':'csharp','MATLAB':'matlab'};
+ const logos={'TypeScript':'typescript','React':'react','Next.js':'nextjs','Tailwind CSS':'tailwindcss','Python':'python','JavaScript':'javascript','Dart':'dart','HTML/CSS':'html5','Node.js':'nodejs','Express':'express','Flutter':'flutter','MySQL':'mysql','scikit-learn':'scikitlearn','OpenCV':'opencv','PySpark':'apachespark','Kafka':'apachekafka','Git':'git','Docker':'docker','Linux':'linux','Java':'java','C#':'csharp','MATLAB':'matlab'};
  const shown=keys.filter(k=>logos[k[1]]);
  shown.splice(4,0,['CSS','CSS','Software','#c6dafa','Used to style responsive web interfaces.']);logos.CSS='css3';
  const colors=['#f3ce65','#f4da61','#97dcec','#f49c70','#90b9f0','#a6d59c','#e6e9eb','#92d6ee','#bddfe9','#f3c389','#a9d9b8','#f2b995','#ddd9ef','#eea18c','#a6daf0','#e8dfb3','#f3c8a9','#cbb4e9','#efb493'];
@@ -40,7 +44,7 @@
  const buttons=[];
  function select(index){const k=shown[index];layout.querySelector('.key-category').textContent=k[2];layout.querySelector('.key-title').textContent=k[1];layout.querySelector('.key-description').textContent=k[4];buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));}
  shown.forEach((k,index)=>{
-   const b=document.createElement('button');b.type='button';b.className='skill-key';b.style.setProperty('--key-color',colors[index]);b.setAttribute('aria-label',k[1]+' — '+k[2]);b.title=k[1];
+   const b=document.createElement('button');b.type='button';b.className='skill-key';b.style.setProperty('--key-color',colors[index % colors.length]);b.setAttribute('aria-label',k[1]+' — '+k[2]);b.title=k[1];
    const face=document.createElement('span');face.className='skill-key-face';
    const mark=document.createElement('img');mark.className='skill-key-logo';mark.alt='';mark.src='assets/tool-logos/'+logos[k[1]]+'.svg';mark.width=40;mark.height=40;mark.draggable=false;
    const label=document.createElement('span');label.className='skill-key-label';label.textContent=k[1];face.append(mark,label);b.append(face);b.addEventListener('click',()=>select(index));board.append(b);buttons.push(b);

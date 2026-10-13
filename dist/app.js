@@ -30,6 +30,13 @@ if (dialog) {
     document.querySelector('#dialog-label').textContent = `${project.type} · ${project.year}`;
     document.querySelector('#dialog-title').textContent = project.title;
     document.querySelector('#dialog-content').innerHTML = project.details;
+    if (project.liveUrl) {
+      const links = document.createElement('p'); links.className = 'project-destinations';
+      for (const [label,url] of [['Open live app',project.liveUrl],['GitHub repository',project.repoUrl]]) {
+        const a = document.createElement('a'); a.textContent = label; a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; links.append(a);
+      }
+      document.querySelector('#dialog-content').append(links);
+    }
     dialog.showModal();
     document.body.style.overflow = 'hidden';
     dialog.scrollTop = 0;
