@@ -36,3 +36,20 @@
    every section render shrunken. minmax(0,1fr) lets .table-wrap scroll instead. */
 @media(max-width:900px){.full-case .section__grid{grid-template-columns:minmax(0,1fr)}.full-case .section__grid>*{min-width:0}}
 @media(max-width:700px){.full-case .section__grid{grid-template-columns:minmax(0,1fr)}.full-case .section__grid>*{min-width:0}.full-case .prose{max-width:100%}.full-case table{min-width:420px;font-size:14px}.full-case th,.full-case td{padding:11px 12px}.full-case .section__rail .mono{font-size:13px;letter-spacing:.09em}.full-case .note{font-size:14px}.full-case figcaption{font-size:13px;line-height:1.65}.full-case .pipeline__step p{font-size:14px}.full-case .callout p{font-size:15px}}
+
+/* Quieter presentation: motion is reserved for direct interaction. */
+.header{background:var(--bg);backdrop-filter:none}
+.hero-focus{letter-spacing:-.025em;line-height:1.5}
+.portrait-panel{border-radius:8px;background:#dce9e8}
+.portrait-panel figcaption{background:#edf5ee}
+.portrait-word,.portrait-coordinate,.portrait-star{display:none}
+.project-card{box-shadow:none}
+.project-card:hover .project-image img{transform:none}
+.about-photo img{border-radius:8px}
+.skill-icon{width:40px;height:40px;border-radius:0;background:none}
+.skill-panel:hover .skill-icon{transform:none}
+.skill-panel{background:transparent}
+.skill-panel h3{margin-top:20px}
+.project-next{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:26px 0}
+.primary:hover{transform:none}
+@media(min-width:901px){.section{padding-top:88px;padding-bottom:88px}}
